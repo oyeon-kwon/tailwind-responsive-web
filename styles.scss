@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// SCSS 함수 정의
+@function calculatePcVw($width) {
+  @return #{$width / 1080px * 100}vw;
+}
+
+// 커스텀 스타일 정의
+.custom-class {
+  width: calculatePcVw(200px);
+  background-color: red;
+}
