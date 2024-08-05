@@ -38,6 +38,7 @@ export default async function Homepage() {
     <>
       <h1 className="text-5xl">Homepage</h1>
       <div>devdev</div>
+      <div>새로운걸 추가해볼게요</div>
       <h1 className="text-5xl">data1 length: {data1.length}</h1>
       <h1 className="text-5xl">data2 length: {data2.length}</h1>
       {/* <button
