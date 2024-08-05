@@ -41,7 +41,7 @@ export default async function Homepage() {
       <div>새로운걸 추가해볼게요</div>
       <h1 className="text-5xl">data1 length: {data1.length}</h1>
       <h1 className="text-5xl">data2 length: {data2.length}</h1>
-      {/* <button
+      <button
         onClick={async () => {
           "use server";
           revalidatePath("/");
@@ -58,7 +58,7 @@ export default async function Homepage() {
         <button className="border border-slate-500 p-2 rounded-1g">
           revalidateTag
         </button>
-      </form> */}
+      </form>
     </>
   );
 }
