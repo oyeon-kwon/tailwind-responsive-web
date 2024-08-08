@@ -8,6 +8,7 @@ const handler = NextAuth({
       clientId: "Mnk4QWZLb1hYVk81cnhfTW1Udlo6MTpjaQ",
       clientSecret: "vOcyWXWvu6YqzIW9l5vI3IG9AYom49EPN6g38Ov5VdxZ1pj5yM",
       version: "2.0",
+      redirectUri: process.env.NEXTAUTH_URL + "/api/auth/callback/twitter",
     }),
   ],
   callbacks: {
@@ -17,10 +18,10 @@ const handler = NextAuth({
         user: { ...session.user, id: token.sub },
       };
     },
-    // async redirect({ baseUrl }) {
-    //   console.log('baseUrl', baseUrl)
-    //   return baseUrl
-    // },
+    async redirect({ baseUrl }) {
+      console.log("baseUrl", baseUrl);
+      return baseUrl;
+    },
   },
 });
 
